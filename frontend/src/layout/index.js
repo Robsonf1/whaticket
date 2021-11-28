@@ -180,28 +180,27 @@ const LoggedInLayout = ({ children }) => {
         div className = { classes.toolbarIcon } >
         <
         IconButton onClick = {
-            () => setDrawerOpen(!drawerOpen)
-        } >
+            () => setDrawerOpen(!drawerOpen) } >
         <
         ChevronLeftIcon / >
         <
-        /IconButton> < /
-        div > <
+        /IconButton>  <
+        /div>  <
         Divider / >
         <
         List >
         <
         MainListItems drawerClose = { drawerClose }
-        /> < /
-        List > <
+        />  <
+        /List>  <
         Divider / >
         <
-        /Drawer> <
+        /Drawer>  <
         UserModal open = { userModalOpen }
         onClose = {
             () => setUserModalOpen(false) }
         userId = { user ? .id }
-        /> <
+        />  <
         AppBar position = "absolute"
         className = { clsx(classes.appBar, drawerOpen && classes.appBarShift) }
         color = { process.env.NODE_ENV === "development" ? "inherit" : "primary" } >
@@ -213,8 +212,7 @@ const LoggedInLayout = ({ children }) => {
         color = "inherit"
         aria - label = "open drawer"
         onClick = {
-            () => setDrawerOpen(!drawerOpen)
-        }
+            () => setDrawerOpen(!drawerOpen) }
         className = {
             clsx(
                 classes.menuButton,
@@ -224,7 +222,7 @@ const LoggedInLayout = ({ children }) => {
         <
         MenuIcon / >
         <
-        /IconButton> <
+        /IconButton>  <
         Typography component = "h1"
         variant = "h6"
         color = "inherit"
@@ -244,8 +242,9 @@ const LoggedInLayout = ({ children }) => {
         <
         AccountCircle / >
         <
-        /IconButton> <
-    Menu id = "menu-appbar"
+        /IconButton>  <
+        Menu
+    id = "menu-appbar"
     anchorEl = { anchorEl }
     getContentAnchorEl = { null }
     anchorOrigin = {
@@ -265,20 +264,18 @@ const LoggedInLayout = ({ children }) => {
         <
         MenuItem onClick = { handleOpenUserModal } > { i18n.t("mainDrawer.appBar.user.profile") } <
         /MenuItem> <
-    MenuItem onClick = { handleClickLogout } > { i18n.t("mainDrawer.appBar.user.logout") } <
-        /MenuItem> < /
-    Menu > <
-        /div> < /
-    Toolbar > <
+        MenuItem onClick = { handleClickLogout } > { i18n.t("mainDrawer.appBar.user.logout") } <
+        /MenuItem>  <
+        /Menu>  <
+        /div> <
+        /Toolbar> <
         /AppBar> <
-    main className = { classes.content } >
+        main className = { classes.content } >
         <
         div className = { classes.appBarSpacer }
-    />
-
-    { children ? children : null } <
-    /main> < /
-    div >
+    /> { children ? children : null } <
+    /main> <
+    /div>
 );
 };
 
