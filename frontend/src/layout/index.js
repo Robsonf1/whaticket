@@ -180,7 +180,8 @@ const LoggedInLayout = ({ children }) => {
         div className = { classes.toolbarIcon } >
         <
         IconButton onClick = {
-            () => setDrawerOpen(!drawerOpen) } >
+            () => setDrawerOpen(!drawerOpen)
+        } >
         <
         ChevronLeftIcon / >
         <
@@ -267,9 +268,9 @@ const LoggedInLayout = ({ children }) => {
         /MenuItem> <
     MenuItem onClick = { handleClickLogout } > { i18n.t("mainDrawer.appBar.user.logout") } <
         /MenuItem> < /
-        Menu > <
+    Menu > <
         /div> < /
-        Toolbar > <
+    Toolbar > <
         /AppBar> <
     main className = { classes.content } >
         <
