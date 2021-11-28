@@ -199,8 +199,7 @@ const LoggedInLayout = ({ children }) => {
         /Drawer> <
         UserModal open = { userModalOpen }
         onClose = {
-            () => setUserModalOpen(false)
-        }
+            () => setUserModalOpen(false) }
         userId = { user ? .id }
         /> <
         AppBar position = "absolute"
