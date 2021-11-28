@@ -184,21 +184,22 @@ const LoggedInLayout = ({ children }) => {
         <
         ChevronLeftIcon / >
         <
-        /IconButton> <
-        /div> <
+        /IconButton> < /
+        div > <
         Divider / >
         <
         List >
         <
         MainListItems drawerClose = { drawerClose }
-        /> <
-        /List> <
+        /> < /
+        List > <
         Divider / >
         <
         /Drawer> <
         UserModal open = { userModalOpen }
         onClose = {
-            () => setUserModalOpen(false) }
+            () => setUserModalOpen(false)
+        }
         userId = { user ? .id }
         /> <
         AppBar position = "absolute"
@@ -212,7 +213,8 @@ const LoggedInLayout = ({ children }) => {
         color = "inherit"
         aria - label = "open drawer"
         onClick = {
-            () => setDrawerOpen(!drawerOpen) }
+            () => setDrawerOpen(!drawerOpen)
+        }
         className = {
             clsx(
                 classes.menuButton,
@@ -228,55 +230,56 @@ const LoggedInLayout = ({ children }) => {
         color = "inherit"
         noWrap className = { classes.title } >
         WhaTicket <
-        /Typography> { user.id && < NotificationsPopOver / > }
+        /Typography> { user.id && < NotificationsPopOver / >
+    }
 
-        <
-        div >
+    <
+    div >
         <
         IconButton aria - label = "account of current user"
-        aria - controls = "menu-appbar"
-        aria - haspopup = "true"
-        onClick = { handleMenu }
-        color = "inherit" >
+    aria - controls = "menu-appbar"
+    aria - haspopup = "true"
+    onClick = { handleMenu }
+    color = "inherit" >
         <
         AccountCircle / >
         <
         /IconButton> <
-        Menu id = "menu-appbar"
-        anchorEl = { anchorEl }
-        getContentAnchorEl = { null }
-        anchorOrigin = {
-            {
-                vertical: "bottom",
-                horizontal: "right",
-            }
+    Menu id = "menu-appbar"
+    anchorEl = { anchorEl }
+    getContentAnchorEl = { null }
+    anchorOrigin = {
+        {
+            vertical: "bottom",
+            horizontal: "right",
         }
-        transformOrigin = {
-            {
-                vertical: "top",
-                horizontal: "right",
-            }
+    }
+    transformOrigin = {
+        {
+            vertical: "top",
+            horizontal: "right",
         }
-        open = { menuOpen }
-        onClose = { handleCloseMenu } >
+    }
+    open = { menuOpen }
+    onClose = { handleCloseMenu } >
         <
         MenuItem onClick = { handleOpenUserModal } > { i18n.t("mainDrawer.appBar.user.profile") } <
         /MenuItem> <
-        MenuItem onClick = { handleClickLogout } > { i18n.t("mainDrawer.appBar.user.logout") } <
-        /MenuItem> <
-        /Menu> <
-        /div> <
-        /Toolbar> <
+    MenuItem onClick = { handleClickLogout } > { i18n.t("mainDrawer.appBar.user.logout") } <
+        /MenuItem> < /
+        Menu > <
+        /div> < /
+        Toolbar > <
         /AppBar> <
-        main className = { classes.content } >
+    main className = { classes.content } >
         <
         div className = { classes.appBarSpacer }
-        />
+    />
 
-        { children ? children : null } <
-        /main> <
-        /div>
-    );
+    { children ? children : null } <
+    /main> < /
+    div >
+);
 };
 
 export default LoggedInLayout;
