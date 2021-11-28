@@ -122,6 +122,11 @@ const MainListItems = (props) => {
               icon={<AccountTreeOutlinedIcon />}
             />
             <ListItemLink
+              to="/api"
+              primary={i18n.t("mainDrawer.listItems.api")}
+              icon={<SettingsOutlinedIcon />}
+            />
+            <ListItemLink
               to="/settings"
               primary={i18n.t("mainDrawer.listItems.settings")}
               icon={<SettingsOutlinedIcon />}
