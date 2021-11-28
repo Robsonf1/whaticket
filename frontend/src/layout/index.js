@@ -227,7 +227,7 @@ const LoggedInLayout = ({ children }) => {
         variant = "h6"
         color = "inherit"
         noWrap className = { classes.title } >
-        WhaTicket2 .0 <
+        WhaTicket <
         /Typography> { user.id && < NotificationsPopOver / > }
 
         <
